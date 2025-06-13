@@ -1045,7 +1045,7 @@
             resize: vertical;
         }
         
-        /* CAPTCHA Styles */
+        /* Netlify reCAPTCHA Styles */
         .g-recaptcha {
             margin: 20px 0;
         }
@@ -1070,6 +1070,13 @@
             color: #b91c1c;
             border: 1px solid #fecaca;
             display: block;
+        }
+        
+        /* Honeypot field */
+        .hidden {
+            position: absolute;
+            left: -9999px;
+            opacity: 0;
         }
         
         /* Footer */
@@ -1650,17 +1657,17 @@
     </header>
 
     <!-- Hero Section -->
-<section class="hero" id="home">
-    <div class="container hero-content">
-        <img src="https://i.postimg.cc/g06ShvXp/DC241-BF4-F676-45-DE-AFC9-5-C01633-F1-C27.jpg" alt="Ritik Roy" class="profile-pic">
-        <h1>Hi, I'm <span>Ritik Roy</span></h1>
-        <p>Marketing Consultant & Strategist helping businesses unlock their potential through data-driven insights and creative solutions.</p>
-        <div>
-            <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i><span>Get In Touch</span></a>
-            <a href="#portfolio" class="btn btn-outline"><i class="fas fa-eye"></i><span>View My Work</span></a>
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <img src="https://i.postimg.cc/g06ShvXp/DC241-BF4-F676-45-DE-AFC9-5-C01633-F1-C27.jpg" alt="Ritik Roy" class="profile-pic">
+            <h1>Hi, I'm <span>Ritik Roy</span></h1>
+            <p>Marketing Consultant & Strategist helping businesses unlock their potential through data-driven insights and creative solutions.</p>
+            <div>
+                <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i><span>Get In Touch</span></a>
+                <a href="#portfolio" class="btn btn-outline"><i class="fas fa-eye"></i><span>View My Work</span></a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- About Section -->
     <section class="section" id="about">
@@ -1751,7 +1758,7 @@
         </div>
     </section>
 
-     <!-- Portfolio Section -->
+    <!-- Portfolio Section -->
     <section class="section portfolio" id="portfolio">
         <div class="container">
             <div class="section-title">
@@ -2659,7 +2666,7 @@
     </section>
 
     <!-- Contact Section -->
-   <section class="section contact" id="contact">
+    <section class="section contact" id="contact">
         <div class="container">
             <div class="section-title">
                 <h2>Let's Start a Conversation</h2>
@@ -2702,25 +2709,45 @@
                     </div>
                 </div>
                 <div class="contact-form">
-                    <form id="contactForm" action="https://formspree.io/f/mvojwjzj" method="POST">
+                    <!-- Netlify Form with reCAPTCHA -->
+                    <form 
+                        name="contact" 
+                        method="POST" 
+                        data-netlify="true" 
+                        data-netlify-recaptcha="true"
+                        netlify-honeypot="bot-field"
+                    >
+                        <!-- Hidden honeypot field for spam protection -->
+                        <input type="hidden" name="form-name" value="contact">
+                        <p class="hidden">
+                            <label>Don't fill this out if you're human: <input name="bot-field"></label>
+                        </p>
+
                         <div id="formMessage" class="form-message" style="display: none;"></div>
+                        
                         <div class="form-group">
                             <label for="name">Name <span>*</span></label>
                             <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="subject">Subject</label>
                             <input type="text" id="subject" name="subject" class="form-control" placeholder="What's this about?">
                         </div>
+                        
                         <div class="form-group">
                             <label for="email">Email <span>*</span></label>
                             <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
                         </div>
+                        
                         <div class="form-group">
                             <label for="message">Message <span>*</span></label>
                             <textarea id="message" name="message" class="form-control" placeholder="Tell me about your project or how I can help..." required></textarea>
                         </div>
-                        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div>
+
+                        <!-- Netlify reCAPTCHA -->
+                        <div data-netlify-recaptcha="true"></div>
+
                         <button type="submit" class="btn"><i class="fas fa-paper-plane"></i><span>Send Message</span></button>
                     </form>
                 </div>
@@ -2728,93 +2755,241 @@
         </div>
     </section>
 
-    <!-- Previous footer and other content remains the same -->
-    <!-- ... -->
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="footer-logo"><i class="fas fa-chart-line"></i>Ritik<span>Roy</span></a>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#tools">Tools</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; <span id="year"></span> Ritik Roy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
 
-    <!-- Updated JavaScript for reCAPTCHA handling -->
+    <!-- Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-btn" id="chatBtn">
+            <i class="fas fa-comment-dots"></i>
+            <div class="ria-avatar"></div>
+        </button>
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-header">
+                <h4><i class="fas fa-robot"></i>Marketing <span class="assistant-name">Assistant</span></h4>
+                <button class="close-chat" id="closeChat">&times;</button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot">
+                    <div class="message-content">
+                        Hi there! I'm Ria, Ritik's AI assistant. How can I help you today?
+                    </div>
+                </div>
+                <div class="suggested-questions">
+                    <button class="suggested-question">What services does Ritik offer?</button>
+                    <button class="suggested-question">How can I contact Ritik?</button>
+                    <button class="suggested-question">Can I see some case studies?</button>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your message...">
+                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script>
-        // Previous JavaScript remains the same until the form submission handler
-        // ...
-
-        // Form submission with Formspree
-        const contactForm = document.getElementById('contactForm');
-        const formMessage = document.getElementById('formMessage');
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
         
-        // reCAPTCHA callback functions
-        function onRecaptchaLoad() {
-            console.log('reCAPTCHA loaded successfully');
-        }
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
         
-        function onRecaptchaError() {
-            console.error('reCAPTCHA failed to load');
-            formMessage.textContent = 'Security verification failed to load. Please refresh the page or contact me directly at roy.ritik@icloud.com.';
-            formMessage.className = 'form-message error';
-            formMessage.style.display = 'block';
-        }
-        
-        contactForm.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            
-            // Verify reCAPTCHA
-            const recaptchaResponse = grecaptcha.getResponse();
-            if(!recaptchaResponse) {
-                formMessage.textContent = 'Please complete the reCAPTCHA verification to prove you\'re not a robot.';
-                formMessage.className = 'form-message error';
-                formMessage.style.display = 'block';
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
                 
-                // Scroll to the reCAPTCHA widget
-                document.querySelector('.g-recaptcha').scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
                 });
                 
-                return;
-            }
-            
-            const formData = new FormData(contactForm);
-            
-            try {
-                const response = await fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
+                // Close mobile menu if open
+                mainNav.classList.remove('active');
+            });
+        });
+        
+        // Portfolio filtering
+        const portfolioTabs = document.querySelectorAll('.portfolio-tab');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        portfolioTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                portfolioTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Filter items
+                const category = tab.dataset.category;
+                
+                portfolioItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
                     }
                 });
-                
-                if(response.ok) {
-                    formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
-                    formMessage.className = 'form-message success';
-                    formMessage.style.display = 'block';
-                    contactForm.reset();
-                    
-                    // Reset reCAPTCHA
-                    if(typeof grecaptcha !== 'undefined') {
-                        grecaptcha.reset();
-                    }
-                    
-                    // Hide message after 5 seconds
-                    setTimeout(() => {
-                        formMessage.style.display = 'none';
-                    }, 5000);
-                } else {
-                    throw new Error('Form submission failed');
+            });
+        });
+        
+        // Case Study Modals
+        const caseStudyLinks = document.querySelectorAll('.view-case-study');
+        const modals = document.querySelectorAll('.modal');
+        const closeModalBtns = document.querySelectorAll('.close-modal');
+        
+        caseStudyLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const caseId = link.dataset.case;
+                const modal = document.getElementById(`${caseId}CaseStudy`);
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        closeModalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const modal = btn.closest('.modal');
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            });
+        });
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            modals.forEach(modal => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
                 }
-            } catch(error) {
-                formMessage.textContent = 'There was a problem sending your message. Please try again later or contact me directly at roy.ritik@icloud.com.';
-                formMessage.className = 'form-message error';
-                formMessage.style.display = 'block';
-                
-                // Log the error for debugging
-                console.error('Form submission error:', error);
+            });
+        });
+        
+        // Chat Widget
+        const chatBtn = document.getElementById('chatBtn');
+        const chatContainer = document.getElementById('chatContainer');
+        const closeChat = document.getElementById('closeChat');
+        const sendMessageBtn = document.getElementById('sendMessage');
+        const chatInput = document.getElementById('chatInput');
+        const chatBody = document.getElementById('chatBody');
+        
+        chatBtn.addEventListener('click', () => {
+            chatContainer.classList.toggle('active');
+        });
+        
+        closeChat.addEventListener('click', () => {
+            chatContainer.classList.remove('active');
+        });
+        
+        sendMessageBtn.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
             }
         });
-
-        // Previous remaining JavaScript remains the same
-        // ...
+        
+        function sendMessage() {
+            const message = chatInput.value.trim();
+            if (message) {
+                // Add user message
+                addMessage(message, 'user');
+                chatInput.value = '';
+                
+                // Show typing indicator
+                const typingIndicator = document.createElement('div');
+                typingIndicator.className = 'typing-indicator';
+                typingIndicator.innerHTML = `
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                `;
+                chatBody.appendChild(typingIndicator);
+                chatBody.scrollTop = chatBody.scrollHeight;
+                
+                // Simulate bot response after delay
+                setTimeout(() => {
+                    // Remove typing indicator
+                    typingIndicator.remove();
+                    
+                    // Add bot response
+                    const responses = [
+                        "I'd be happy to help with that! Ritik specializes in digital marketing strategies and business consulting.",
+                        "For more detailed information, you can check out Ritik's services section or contact him directly.",
+                        "That's a great question! Ritik has worked on similar projects before. Would you like me to share some case studies?",
+                        "I can connect you directly with Ritik if you'd like to discuss your specific needs.",
+                        "Thanks for your message! Ritik typically responds to inquiries within 24 hours."
+                    ];
+                    
+                    const randomResponse = responses[Math.floor(Math.random() * responses.length)];
+                    addMessage(randomResponse, 'bot');
+                }, 1500);
+            }
+        }
+        
+        function addMessage(content, sender) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chat-message ${sender}`;
+            messageDiv.innerHTML = `
+                <div class="message-content">${content}</div>
+            `;
+            chatBody.appendChild(messageDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        
+        // Suggested questions
+        const suggestedQuestions = document.querySelectorAll('.suggested-question');
+        suggestedQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                chatInput.value = question.textContent;
+                sendMessage();
+            });
+        });
+        
+        // Update copyright year
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Form submission handling (for Netlify)
+        const contactForm = document.querySelector('form[name="contact"]');
+        const formMessage = document.getElementById('formMessage');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                // This is handled by Netlify, but we can show a success message
+                formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+                formMessage.className = 'form-message success';
+                formMessage.style.display = 'block';
+                
+                // Scroll to the message
+                formMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Reset form after submission
+                setTimeout(() => {
+                    contactForm.reset();
+                }, 1000);
+            });
+        }
     </script>
-
-    <!-- Update the reCAPTCHA script tag to include callbacks -->
-    <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit&hl=en" async defer></script>
 </body>
 </html>
