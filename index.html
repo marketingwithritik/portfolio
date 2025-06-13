@@ -1,0 +1,3156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ritik Roy | Marketing Consultant & Strategist</title>
+    <meta name="description" content="Marketing consultant specializing in data-driven strategies, business growth, and market expansion. Currently pursuing PGPM at ICFAI Business School.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #7209b7;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+            --success-color: #4cc9f0;
+            --text-color: #2b2d42;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+            background-color: var(--light-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo span {
+            color: var(--accent-color);
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+            position: relative;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        
+        nav ul li a i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            bottom: -5px;
+            left: 0;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--dark-color);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .mobile-menu-btn:hover {
+            transform: rotate(90deg);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 180px 0 100px;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, rgba(67, 97, 238, 0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(114, 9, 183, 0.1) 0%, rgba(114, 9, 183, 0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .profile-pic {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            margin-bottom: 30px;
+            transition: all 0.5s ease;
+        }
+        
+        .profile-pic:hover {
+            transform: scale(1.05) rotate(5deg);
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            color: var(--gray-color);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 30px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: none;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn i {
+            margin-right: 8px;
+            font-size: 18px;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-color), var(--primary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 50px;
+        }
+        
+        .btn:hover::after {
+            opacity: 1;
+        }
+        
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+            box-shadow: none;
+            margin-left: 15px;
+        }
+        
+        .btn-outline::after {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+        
+        .btn-outline:hover {
+            color: white;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 100px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        .section-title p {
+            color: var(--gray-color);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 18px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            line-height: 1.3;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray-color);
+            font-size: 16px;
+            line-height: 1.8;
+        }
+        
+        .about-image {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        
+        .about-image img {
+            max-width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+        
+        .about-image img:hover {
+            transform: translateY(-10px);
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--primary-color);
+            border-radius: 15px;
+            z-index: -1;
+            transition: all 0.5s ease;
+        }
+        
+        .about-image:hover::before {
+            top: -15px;
+            left: -15px;
+        }
+        
+        .education-experience {
+            margin-top: 50px;
+        }
+        
+        .education-experience h4 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .education-experience h4 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            padding-bottom: 30px;
+        }
+        
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -39px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        .timeline-item h5 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .timeline-item h5 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+        
+        .timeline-item .date {
+            color: var(--gray-color);
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 500;
+        }
+        
+        .timeline-item p {
+            color: var(--gray-color);
+            line-height: 1.7;
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: #f8fafc;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.1) 0%, rgba(114, 9, 183, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        
+        .service-card i {
+            font-size: 50px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover i {
+            transform: scale(1.1);
+        }
+        
+        .service-card h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .service-card p {
+            color: var(--gray-color);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+        
+        .service-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .service-features li {
+            margin-bottom: 10px;
+            color: var(--gray-color);
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.6;
+        }
+        
+        .service-features li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-right: 10px;
+            font-size: 14px;
+        }
+        
+        /* Portfolio Section */
+        .portfolio {
+            background-color: #f8fafc;
+        }
+        
+        .portfolio-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .portfolio-tab {
+            padding: 10px 25px;
+            margin: 0 5px;
+            cursor: pointer;
+            font-weight: 500;
+            color: var(--gray-color);
+            transition: all 0.3s ease;
+            border-radius: 50px;
+            background-color: transparent;
+            border: 2px solid #e9ecef;
+        }
+        
+        .portfolio-tab.active {
+            color: white;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-color: transparent;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .portfolio-tab:hover {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .portfolio-item {
+            background-color: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .portfolio-img {
+            height: 250px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .portfolio-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-img img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(67, 97, 238, 0.1), rgba(114, 9, 183, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-img::before {
+            opacity: 1;
+        }
+        
+        .portfolio-info {
+            padding: 25px;
+        }
+        
+        .portfolio-info h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        .portfolio-info p {
+            color: var(--gray-color);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .portfolio-stats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .stat {
+            background-color: #e0f2fe;
+            color: var(--primary-color);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .stat i {
+            margin-right: 5px;
+            font-size: 12px;
+        }
+        
+        .portfolio-link {
+            display: inline-flex;
+            align-items: center;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-link i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .portfolio-link:hover {
+            color: var(--accent-color);
+        }
+        
+        .portfolio-link:hover i {
+            transform: translateX(5px);
+        }
+
+        /* Case Study Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .modal-content {
+            background-color: white;
+            max-width: 900px;
+            margin: 50px auto;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            color: var(--gray-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: none;
+            border: none;
+            z-index: 1;
+        }
+
+        .close-modal:hover {
+            color: var(--primary-color);
+            transform: rotate(90deg);
+        }
+
+        .case-study-header {
+            height: 300px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-study-header i {
+            font-size: 100px;
+            color: white;
+            opacity: 0.2;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .case-study-title {
+            position: relative;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .case-study-title h3 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .case-study-title p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .case-study-body {
+            padding: 40px;
+        }
+
+        .case-study-section {
+            margin-bottom: 30px;
+        }
+
+        .case-study-section h4 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .case-study-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .case-study-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: var(--gray-color);
+        }
+
+        .case-study-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .case-study-stat {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .case-study-stat h5 {
+            font-size: 14px;
+            color: var(--gray-color);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .case-study-stat p {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 0;
+        }
+
+        .case-study-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .case-study-image {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .case-study-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Tools Section */
+        .tools-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        
+        .tool-card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-card i {
+            font-size: 50px;
+            margin-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .tool-card:hover i {
+            transform: scale(1.1);
+        }
+        
+        .tool-card h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        .skill-meter {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        
+        .skill-level {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 4px;
+        }
+        
+        .skill-percent {
+            font-size: 14px;
+            color: var(--gray-color);
+            font-weight: 500;
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: #f8fafc;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item i {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+            min-width: 20px;
+        }
+        
+        .contact-text h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: var(--dark-color);
+        }
+        
+        .contact-text p, .contact-text a {
+            color: var(--gray-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            line-height: 1.7;
+        }
+        
+        .contact-text a:hover {
+            color: var(--primary-color);
+        }
+        
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark-color);
+        }
+        
+        .form-group label span {
+            color: #ef4444;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* CAPTCHA Styles */
+        .g-recaptcha {
+            margin: 20px 0;
+        }
+        
+        /* Form Success/Error Messages */
+        .form-message {
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .form-message.success {
+            background-color: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+            display: block;
+        }
+        
+        .form-message.error {
+            background-color: #fee2e2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+            display: block;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 70px 0 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+        
+        .footer-logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .footer-logo span {
+            color: var(--success-color);
+        }
+        
+        .footer-logo i {
+            margin-right: 10px;
+            font-size: 28px;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+            gap: 15px;
+        }
+        
+        .footer-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 16px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            color: #94a3b8;
+            font-size: 14px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* AI Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+        }
+        
+        .chat-btn {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(67, 97, 238, 0.4);
+            transition: all 0.3s ease;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chat-btn::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 50%;
+        }
+        
+        .chat-btn:hover::after {
+            opacity: 1;
+        }
+        
+        .chat-btn i {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .chat-btn:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 15px 40px rgba(67, 97, 238, 0.5);
+        }
+        
+        .chat-btn .ria-avatar {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="30" r="20" fill="%23FFD5CD"/><circle cx="50" cy="80" r="30" fill="%23FFD5CD"/><circle cx="40" cy="25" r="3" fill="%23605B56"/><circle cx="60" cy="25" r="3" fill="%23605B56"/><path d="M45,35 Q50,40 55,35" stroke="%23605B56" stroke-width="2" fill="none"/><path d="M35,60 Q50,75 65,60" stroke="%23FF9AA2" stroke-width="3" fill="none"/></svg>');
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .chat-btn:hover .ria-avatar {
+            opacity: 1;
+        }
+        
+        .chat-container {
+            position: absolute;
+            bottom: 90px;
+            right: 0;
+            width: 380px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transform: scale(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .chat-container.active {
+            transform: scale(1);
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .chat-header h4 {
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+        }
+        
+        .chat-header h4 i {
+            margin-right: 10px;
+        }
+        
+        .chat-header .assistant-name {
+            font-weight: 600;
+            margin-left: 5px;
+        }
+        
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .close-chat:hover {
+            transform: rotate(90deg);
+        }
+        
+        .chat-body {
+            padding: 20px;
+            height: 350px;
+            overflow-y: auto;
+            background-color: #f8f9fa;
+        }
+        
+        .chat-message {
+            margin-bottom: 15px;
+            display: flex;
+        }
+        
+        .chat-message.bot {
+            justify-content: flex-start;
+        }
+        
+        .chat-message.user {
+            justify-content: flex-end;
+        }
+        
+        .message-content {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 15px;
+            font-size: 15px;
+            line-height: 1.5;
+            position: relative;
+        }
+        
+        .bot .message-content {
+            background-color: white;
+            border-bottom-left-radius: 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .user .message-content {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-bottom-right-radius: 5px;
+        }
+        
+        .bot .message-content::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+        
+        .user .message-content::before {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            transform: rotate(45deg);
+            z-index: -1;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 15px;
+            border-top: 1px solid #e9ecef;
+            background-color: white;
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 50px;
+            font-family: 'Poppins', sans-serif;
+            outline: none;
+            transition: all 0.3s ease;
+            font-size: 15px;
+        }
+        
+        .chat-input input:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        
+        .chat-input button {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .chat-input button:hover {
+            transform: rotate(15deg) scale(1.1);
+        }
+        
+        /* Typing Indicator */
+        .typing-indicator {
+            display: flex;
+            padding: 10px 15px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            margin-bottom: 15px;
+            width: fit-content;
+        }
+        
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--gray-color);
+            border-radius: 50%;
+            margin: 0 3px;
+            animation: typingAnimation 1.4s infinite ease-in-out;
+        }
+        
+        .typing-dot:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        @keyframes typingAnimation {
+            0%, 60%, 100% {
+                transform: translateY(0);
+            }
+            30% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Suggested Questions */
+        .suggested-questions {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .suggested-question {
+            background-color: #e9ecef;
+            color: var(--dark-color);
+            padding: 8px 12px;
+            border-radius: 15px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+            border: none;
+            width: 100%;
+        }
+
+        .suggested-question:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 1000px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-top: 40px;
+                max-width: 500px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .section-title h2 {
+                font-size: 32px;
+            }
+            
+            .section-title p {
+                font-size: 16px;
+            }
+
+            .case-study-header {
+                height: 250px;
+            }
+
+            .case-study-title h3 {
+                font-size: 30px;
+            }
+
+            .case-study-body {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                transform: translateY(-150%);
+                opacity: 0;
+                transition: all 0.3s ease;
+                z-index: 999;
+            }
+            
+            nav.active {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0 0 15px 0;
+            }
+            
+            nav ul li a {
+                padding: 10px 0;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 16px;
+            }
+            
+            .section {
+                padding: 80px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .btn-outline {
+                margin-left: 0;
+                margin-top: 15px;
+                display: block;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chat-container {
+                width: 320px;
+                right: -20px;
+            }
+
+            .case-study-header {
+                height: 200px;
+            }
+
+            .case-study-title h3 {
+                font-size: 26px;
+            }
+
+            .case-study-title p {
+                font-size: 16px;
+            }
+
+            .case-study-body {
+                padding: 20px;
+            }
+
+            .case-study-section h4 {
+                font-size: 20px;
+            }
+
+            .case-study-stat p {
+                font-size: 24px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero p {
+                font-size: 15px;
+            }
+            
+            .section-title h2 {
+                font-size: 26px;
+            }
+            
+            .portfolio-tab {
+                padding: 8px 15px;
+                font-size: 14px;
+            }
+            
+            .chat-container {
+                width: 300px;
+                right: -10px;
+            }
+            
+            .chat-btn {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+            }
+
+            .case-study-header {
+                height: 180px;
+            }
+
+            .case-study-title h3 {
+                font-size: 22px;
+            }
+
+            .case-study-title p {
+                font-size: 14px;
+            }
+
+            .case-study-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-images {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo"><i class="fas fa-chart-line"></i>Ritik<span>Roy</span></a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i>Home</a></li>
+                    <li><a href="#about"><i class="fas fa-user"></i>About</a></li>
+                    <li><a href="#services"><i class="fas fa-cogs"></i>Services</a></li>
+                    <li><a href="#portfolio"><i class="fas fa-briefcase"></i>Portfolio</a></li>
+                    <li><a href="#tools"><i class="fas fa-tools"></i>Tools</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container hero-content">
+        <img src="https://i.postimg.cc/g06ShvXp/DC241-BF4-F676-45-DE-AFC9-5-C01633-F1-C27.jpg" alt="Ritik Roy" class="profile-pic">
+        <h1>Hi, I'm <span>Ritik Roy</span></h1>
+        <p>Marketing Consultant & Strategist helping businesses unlock their potential through data-driven insights and creative solutions.</p>
+        <div>
+            <a href="#contact" class="btn"><i class="fas fa-paper-plane"></i><span>Get In Touch</span></a>
+            <a href="#portfolio" class="btn btn-outline"><i class="fas fa-eye"></i><span>View My Work</span></a>
+        </div>
+    </div>
+</section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Driven by curiosity and powered by data, I help businesses unlock their marketing potential.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Marketing Enthusiast & Business Consultant</h3>
+                    <p>I'm a marketing enthusiast with a passion for understanding consumer behavior and creating strategies that drive real business growth. My journey in marketing is fueled by the belief that every brand has a unique story to tell, and my role is to help them tell it effectively.</p>
+                    <p>With experience in business consulting and a deep understanding of market dynamics, I specialize in developing data-driven marketing strategies that not only engage audiences but also deliver measurable results for businesses across various industries.</p>
+                    
+                    <div class="education-experience">
+                        <h4><i class="fas fa-graduation-cap"></i>Education & Experience</h4>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <h5><i class="fas fa-university"></i>PGPM in Marketing</h5>
+                                <span class="date">Currently pursuing</span>
+                                <p>ICFAI Business School - Specializing in Digital Marketing and Consumer Analytics</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5><i class="fas fa-graduation-cap"></i>Bachelor of Commerce (Honours)</h5>
+                                <span class="date">2023</span>
+                                <p>University of Delhi - Focus on Marketing and Business Analytics</p>
+                            </div>
+                            <div class="timeline-item">
+                                <h5><i class="fas fa-briefcase"></i>Business Consultant</h5>
+                                <span class="date">World Web Trade</span>
+                                <p>Specialized in market identification, client advisory, and business growth strategy development with focus on export and domestic market expansion. Delivered 15+ successful projects with measurable ROI.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.postimg.cc/RFxDqQfJ/E4-A5-D09-A-A483-4-EDE-AFEC-90-D51-D49-BC71.jpg" alt="Marketing Strategy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Services</h2>
+                <p>Comprehensive marketing and business consulting services tailored to your needs.</p>
+            </div>
+            <div class="services-container">
+                <div class="service-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Digital Marketing</h4>
+                    <p>Comprehensive digital strategies to establish your online presence and drive measurable growth.</p>
+                    <ul class="service-features">
+                        <li>Search Engine Optimization (SEO) to improve organic visibility</li>
+                        <li>Pay-Per-Click (PPC) campaign management for immediate results</li>
+                        <li>Social media strategy development and execution</li>
+                        <li>Content marketing and blogging strategy</li>
+                        <li>Conversion rate optimization and analytics</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-chess"></i>
+                    <h4>Marketing Strategy</h4>
+                    <p>Data-driven marketing strategies that align with your business objectives and market position.</p>
+                    <ul class="service-features">
+                        <li>Comprehensive market research and competitive analysis</li>
+                        <li>Brand positioning and messaging strategy</li>
+                        <li>Customer segmentation and targeting</li>
+                        <li>Marketing funnel optimization</li>
+                        <li>ROI measurement and performance analytics</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-briefcase"></i>
+                    <h4>Business Consulting</h4>
+                    <p>Strategic guidance to help your business grow and compete effectively in your market.</p>
+                    <ul class="service-features">
+                        <li>Business growth and expansion strategy</li>
+                        <li>Market entry and penetration planning</li>
+                        <li>Operational efficiency improvements</li>
+                        <li>Customer acquisition and retention strategies</li>
+                        <li>Performance metrics and KPI development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Portfolio Section -->
+    <section class="section portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Portfolio</h2>
+                <p>Showcasing marketing expertise through professional case studies and measurable results.</p>
+            </div>
+            <div class="portfolio-tabs">
+                <div class="portfolio-tab active" data-category="all">All</div>
+                <div class="portfolio-tab" data-category="digital">Digital Marketing</div>
+                <div class="portfolio-tab" data-category="strategy">Strategy</div>
+                <div class="portfolio-tab" data-category="consulting">Consulting</div>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Digital Marketing Projects -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="E-commerce Analytics Dashboard">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>E-commerce Growth Strategy</h4>
+                        <p>360° digital marketing campaign for fashion e-commerce brand resulting in 3X revenue growth.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-arrow-up"></i>210% Revenue Growth</span>
+                            <span class="stat"><i class="fas fa-percentage"></i>58% ROAS</span>
+                            <span class="stat"><i class="fas fa-users"></i>1.2M+ Impressions</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="ecommerce">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="App Launch Campaign">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>App Launch Campaign</h4>
+                        <p>Multi-channel user acquisition strategy for fitness app achieving 50,000+ installs.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-download"></i>52K Installs</span>
+                            <span class="stat"><i class="fas fa-dollar-sign"></i>$1.24 CPI</span>
+                            <span class="stat"><i class="fas fa-clock"></i>4.2 Min Session</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="applaunch">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Strategy Projects -->
+                <div class="portfolio-item" data-category="strategy">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Market Positioning Strategy">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Market Positioning</h4>
+                        <p>Competitive differentiation strategy for SaaS company in crowded project management space.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-chess"></i>Positioning Framework</span>
+                            <span class="stat"><i class="fas fa-percentage"></i>40% Conversion Lift</span>
+                            <span class="stat"><i class="fas fa-trophy"></i>#2 Market Share</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="positioning">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="strategy">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Omnichannel Strategy">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Omnichannel Strategy</h4>
+                        <p>Integrated customer journey mapping for retail brand with 28 stores nationwide.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-sync-alt"></i>Channel Integration</span>
+                            <span class="stat"><i class="fas fa-user"></i>360° Customer View</span>
+                            <span class="stat"><i class="fas fa-wallet"></i>22% CLV Increase</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="omnichannel">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Consulting Projects -->
+                <div class="portfolio-item" data-category="consulting">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Market Entry Strategy">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Market Entry Strategy</h4>
+                        <p>International expansion roadmap for D2C skincare brand entering Southeast Asia.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-map-marked"></i>3 Countries</span>
+                            <span class="stat"><i class="fas fa-store"></i>120 Retail Partners</span>
+                            <span class="stat"><i class="fas fa-rocket"></i>6-Month Launch</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="marketentry">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="consulting">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Business Transformation">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Business Transformation</h4>
+                        <p>Operational efficiency program for manufacturing client reducing costs by 32%.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-money-bill-wave"></i>32% Cost Reduction</span>
+                            <span class="stat"><i class="fas fa-clock"></i>40% Faster Processes</span>
+                            <span class="stat"><i class="fas fa-chart-bar"></i>18% Margin Growth</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="transformation">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- New Case Studies with Analytics -->
+                <div class="portfolio-item" data-category="digital">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1815&q=80" alt="SEO Optimization">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>SEO Optimization</h4>
+                        <p>Comprehensive SEO strategy for B2B SaaS company resulting in 300% organic traffic growth.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-chart-line"></i>300% Traffic Growth</span>
+                            <span class="stat"><i class="fas fa-search"></i>#1 for 15 Keywords</span>
+                            <span class="stat"><i class="fas fa-dollar-sign"></i>45% Lower CAC</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="seo">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="strategy">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brand Strategy">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Brand Strategy</h4>
+                        <p>Complete brand overhaul for legacy company leading to 80% increase in engagement.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-heart"></i>80% Engagement Lift</span>
+                            <span class="stat"><i class="fas fa-users"></i>2X Social Followers</span>
+                            <span class="stat"><i class="fas fa-tag"></i>35% Brand Recall</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="brand">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="consulting">
+                    <div class="portfolio-img">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Business Growth">
+                    </div>
+                    <div class="portfolio-info">
+                        <h4>Business Growth Strategy</h4>
+                        <p>Scalable growth framework for tech startup resulting in 5X valuation increase.</p>
+                        <div class="portfolio-stats">
+                            <span class="stat"><i class="fas fa-rocket"></i>5X Valuation</span>
+                            <span class="stat"><i class="fas fa-user-plus"></i>3X Customer Base</span>
+                            <span class="stat"><i class="fas fa-globe"></i>New Markets</span>
+                        </div>
+                        <a href="#" class="portfolio-link view-case-study" data-case="growth">View Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Modals -->
+    <!-- E-commerce Case Study -->
+    <div class="modal" id="ecommerceCaseStudy">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="case-study-header">
+                <i class="fas fa-shopping-cart"></i>
+                <div class="case-study-title">
+                    <h3>E-commerce Growth Strategy</h3>
+                    <p>210% revenue growth through integrated digital marketing approach</p>
+                </div>
+            </div>
+            <div class="case-study-body">
+                <div class="case-study-section">
+                    <h4>Client Overview</h4>
+                    <p>Mid-sized fashion e-commerce brand specializing in sustainable apparel with $2.5M annual revenue struggling with stagnant growth and low customer retention.</p>
+                    
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Revenue Growth</h5>
+                            <p>210%</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Return on Ad Spend</h5>
+                            <p>5.8X</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>New Customers</h5>
+                            <p>18,500+</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Challenges</h4>
+                    <ul>
+                        <li>Low conversion rate (1.2%) despite high traffic</li>
+                        <li>72% cart abandonment rate</li>
+                        <li>High customer acquisition costs ($45 per customer)</li>
+                        <li>Limited repeat purchase behavior (15% repeat rate)</li>
+                        <li>No cohesive marketing strategy across channels</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Solution Framework</h4>
+                    <h5>1. Customer Journey Optimization</h5>
+                    <ul>
+                        <li>Implemented advanced analytics to identify 12 key drop-off points</li>
+                        <li>Redesigned checkout flow reducing steps from 5 to 3</li>
+                        <li>Added trust signals at critical decision points</li>
+                    </ul>
+                    
+                    <h5>2. Performance Marketing Overhaul</h5>
+                    <ul>
+                        <li>Restructured Google Ads account with new SKU-based campaigns</li>
+                        <li>Implemented dynamic remarketing across social platforms</li>
+                        <li>Developed lookalike audiences from high-value customer segments</li>
+                    </ul>
+                    
+                    <h5>3. Retention Program</h5>
+                    <ul>
+                        <li>Created segmented email flows based on purchase behavior</li>
+                        <li>Launched loyalty program with tiered rewards</li>
+                        <li>Developed personalized product recommendation engine</li>
+                    </ul>
+                    
+                    <div class="case-study-images">
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="E-commerce Dashboard">
+                        </div>
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Marketing Funnel">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Key Results</h4>
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Revenue Growth</h5>
+                            <p>210%</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Conversion Rate</h5>
+                            <p>3.1% (+158%)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>CAC Reduction</h5>
+                            <p>$22 (-51%)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Repeat Purchase Rate</h5>
+                            <p>38% (+153%)</p>
+                        </div>
+                    </div>
+                    <p>The 12-month campaign delivered $5.3M in incremental revenue with 58% return on ad spend. The customer lifetime value increased by 320% through improved retention strategies.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Launch Case Study -->
+    <div class="modal" id="applaunchCaseStudy">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="case-study-header">
+                <i class="fas fa-mobile-alt"></i>
+                <div class="case-study-title">
+                    <h3>Fitness App Launch Campaign</h3>
+                    <p>50,000+ installs with industry-leading engagement metrics</p>
+                </div>
+            </div>
+            <div class="case-study-body">
+                <div class="case-study-section">
+                    <h4>Project Overview</h4>
+                    <p>Comprehensive user acquisition strategy for new AI-powered fitness app targeting health-conscious millennials in competitive market.</p>
+                    
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>App Installs</h5>
+                            <p>52,000+</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Cost Per Install</h5>
+                            <p>$1.24</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Day 7 Retention</h5>
+                            <p>42%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Strategy Components</h4>
+                    <h5>1. Pre-Launch Buzz</h5>
+                    <ul>
+                        <li>Influencer partnerships with micro (50) and macro (5) fitness creators</li>
+                        <li>Beta tester program generating 1,200 early users</li>
+                        <li>Waitlist strategy capturing 8,500 emails</li>
+                    </ul>
+                    
+                    <h5>2. Performance Marketing</h5>
+                    <ul>
+                        <li>Creative testing across 28 ad variations</li>
+                        <li>Precise audience segmentation by fitness interest</li>
+                        <li>Automated bid strategies optimizing for in-app events</li>
+                    </ul>
+                    
+                    <h5>3. Organic Growth</h5>
+                    <ul>
+                        <li>ASO optimization driving 35% of total installs</li>
+                        <li>Referral program generating viral coefficient of 1.8</li>
+                        <li>Community building through private Facebook groups</li>
+                    </ul>
+                    
+                    <div class="case-study-images">
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="App Screens">
+                        </div>
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Campaign Dashboard">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Results Achieved</h4>
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Total Installs</h5>
+                            <p>52,189</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>CPI</h5>
+                            <p>$1.24 (38% below target)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Session Duration</h5>
+                            <p>4.2 min (industry avg: 2.8)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Day 30 Retention</h5>
+                            <p>28% (2.3X benchmark)</p>
+                        </div>
+                    </div>
+                    <p>The campaign exceeded all KPIs, achieving 52,000+ installs in first 3 months at 38% below target CPI. The app reached #3 in Health & Fitness category and maintained 4.8-star rating.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Market Positioning Case Study -->
+    <div class="modal" id="positioningCaseStudy">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="case-study-header">
+                <i class="fas fa-bullseye"></i>
+                <div class="case-study-title">
+                    <h3>Competitive Positioning Strategy</h3>
+                    <p>Differentiation framework for SaaS company in crowded market</p>
+                </div>
+            </div>
+            <div class="case-study-body">
+                <div class="case-study-section">
+                    <h4>Client Situation</h4>
+                    <p>Series B SaaS startup in project management space struggling to differentiate from 20+ established competitors despite superior technology.</p>
+                    
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Market Share</h5>
+                            <p>2.1% (#8 player)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Conversion Rate</h5>
+                            <p>1.8%</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Sales Cycle</h5>
+                            <p>94 days</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Strategic Approach</h4>
+                    <h5>1. Market Segmentation</h5>
+                    <ul>
+                        <li>Identified underserved mid-market creative agencies (12% CAGR)</li>
+                        <li>Discovered 3 unmet needs through 75 customer interviews</li>
+                        <li>Quantified $1.2B addressable market in segment</li>
+                    </ul>
+                    
+                    <h5>2. Positioning Framework</h5>
+                    <ul>
+                        <li>Developed "Creative Flow" positioning platform</li>
+                        <li>Created proprietary "Visual Workflow" methodology</li>
+                        <li>Aligned all messaging to creative team pain points</li>
+                    </ul>
+                    
+                    <h5>3. Go-to-Market Execution</h5>
+                    <ul>
+                        <li>Rebuilt website around new positioning</li>
+                        <li>Trained sales team on vertical-specific pitch</li>
+                        <li>Launched targeted account-based marketing program</li>
+                    </ul>
+                    
+                    <div class="case-study-images">
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Positioning Framework">
+                        </div>
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Competitive Analysis">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Business Impact</h4>
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Market Share</h5>
+                            <p>14.7% (#2 player)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Conversion Rate</h5>
+                            <p>4.3% (+139%)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Sales Cycle</h5>
+                            <p>61 days (-35%)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>ARR Growth</h5>
+                            <p>320%</p>
+                        </div>
+                    </div>
+                    <p>The positioning strategy transformed the company from generic project management tool to category leader for creative teams, enabling $25M Series C at 5X previous valuation.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Market Entry Case Study -->
+    <div class="modal" id="marketentryCaseStudy">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="case-study-header">
+                <i class="fas fa-globe-americas"></i>
+                <div class="case-study-title">
+                    <h3>Southeast Asia Market Entry</h3>
+                    <p>Expansion strategy for D2C skincare brand in emerging markets</p>
+                </div>
+            </div>
+            <div class="case-study-body">
+                <div class="case-study-section">
+                    <h4>Client Background</h4>
+                    <p>US-based clean skincare brand with $18M domestic revenue seeking international expansion with limited overseas experience.</p>
+                    
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Target Markets</h5>
+                            <p>3 Countries</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Timeframe</h5>
+                            <p>6 Months</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Investment</h5>
+                            <p>$1.2M</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Market Challenges</h4>
+                    <ul>
+                        <li>No existing distribution partnerships in region</li>
+                        <li>Limited brand recognition outside US</li>
+                        <li>Complex regulatory requirements across markets</li>
+                        <li>Cultural differences in skincare preferences</li>
+                        <li>Competition from established local brands</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Strategic Solution</h4>
+                    <h5>1. Market Prioritization</h5>
+                    <ul>
+                        <li>Assessed 8 potential markets using 12 criteria</li>
+                        <li>Selected Singapore, Malaysia, Thailand as beachheads</li>
+                        <li>Developed phased rollout plan</li>
+                    </ul>
+                    
+                    <h5>2. Localization Strategy</h5>
+                    <ul>
+                        <li>Adapted formulations for tropical climates</li>
+                        <li>Localized packaging and messaging</li>
+                        <li>Developed region-specific product bundles</li>
+                    </ul>
+                    
+                    <h5>3. Go-to-Market Model</h5>
+                    <ul>
+                        <li>Hybrid e-commerce and retail distribution</li>
+                        <li>Strategic partnerships with beauty influencers</li>
+                        <li>Localized customer service infrastructure</li>
+                    </ul>
+                    
+                    <div class="case-study-images">
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Market Analysis">
+                        </div>
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Product Localization">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Expansion Results</h4>
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Retail Partners</h5>
+                            <p>120 Stores</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>First Year Revenue</h5>
+                            <p>$3.8M</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Market Share</h5>
+                            <p>4.2% (#3 Imported Brand)</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>ROI</h5>
+                            <p>217%</p>
+                        </div>
+                    </div>
+                    <p>The expansion exceeded first-year targets by 27%, establishing the brand as premium US import in all three markets. The success enabled subsequent expansion to 2 additional countries.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEO Case Study -->
+    <div class="modal" id="seoCaseStudy">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="case-study-header">
+                <i class="fas fa-search"></i>
+                <div class="case-study-title">
+                    <h3>SEO Optimization Strategy</h3>
+                    <p>300% organic traffic growth for B2B SaaS company</p>
+                </div>
+            </div>
+            <div class="case-study-body">
+                <div class="case-study-section">
+                    <h4>Client Overview</h4>
+                    <p>B2B SaaS platform in the HR tech space with $8M ARR struggling with stagnant organic traffic and low conversion rates from existing traffic.</p>
+                    
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Organic Traffic</h5>
+                            <p>300% Growth</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Keyword Rankings</h5>
+                            <p>15 #1 Positions</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Conversion Rate</h5>
+                            <p>2.5X Increase</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Challenges</h4>
+                    <ul>
+                        <li>Organic traffic plateaued at 25,000 monthly visitors</li>
+                        <li>Only 5% of traffic converting to leads</li>
+                        <li>Competitors dominating high-intent keywords</li>
+                        <li>Technical SEO issues causing crawl budget waste</li>
+                        <li>Content not aligned with buyer journey stages</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Strategic Approach</h4>
+                    <h5>1. Technical SEO Audit & Fixes</h5>
+                    <ul>
+                        <li>Identified and fixed 42 technical issues</li>
+                        <li>Improved site speed by 68% (3.2s to 1.5s)</li>
+                        <li>Restructured URL architecture for better crawling</li>
+                    </ul>
+                    
+                    <h5>2. Content Strategy Overhaul</h5>
+                    <ul>
+                        <li>Developed topic clusters around 5 core pillars</li>
+                        <li>Created 25 high-intent landing pages</li>
+                        <li>Optimized existing content for featured snippets</li>
+                    </ul>
+                    
+                    <h5>3. Link Building Campaign</h5>
+                    <ul>
+                        <li>Secured 85 high-quality backlinks</li>
+                        <li>Developed 3 industry reports for linkable assets</li>
+                        <li>Implemented strategic guest posting program</li>
+                    </ul>
+                    
+                    <div class="case-study-images">
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1815&q=80" alt="SEO Dashboard">
+                        </div>
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Keyword Analysis">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Results Achieved</h4>
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Organic Traffic</h5>
+                            <p>300% Increase</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Keyword Rankings</h5>
+                            <p>15 #1 Positions</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Conversion Rate</h5>
+                            <p>2.5X Lift</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Customer Acquisition Cost</h5>
+                            <p>45% Reduction</p>
+                        </div>
+                    </div>
+                    <p>The comprehensive SEO strategy delivered 100,000+ monthly organic visitors within 12 months, with 15 top-ranking keywords driving 65% of qualified leads. The improved conversion rate and lower CAC contributed to $3.2M in incremental revenue.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Brand Strategy Case Study -->
+    <div class="modal" id="brandCaseStudy">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="case-study-header">
+                <i class="fas fa-palette"></i>
+                <div class="case-study-title">
+                    <h3>Brand Strategy Overhaul</h3>
+                    <p>Complete brand transformation for legacy manufacturing company</p>
+                </div>
+            </div>
+            <div class="case-study-body">
+                <div class="case-study-section">
+                    <h4>Client Situation</h4>
+                    <p>35-year-old industrial manufacturing company with outdated brand perception struggling to attract younger buyers and compete with modern competitors.</p>
+                    
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Brand Engagement</h5>
+                            <p>80% Increase</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Social Followers</h5>
+                            <p>2X Growth</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Brand Recall</h5>
+                            <p>35% Lift</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Strategic Process</h4>
+                    <h5>1. Brand Discovery</h5>
+                    <ul>
+                        <li>Conducted 50+ stakeholder interviews</li>
+                        <li>Completed competitive brand audit</li>
+                        <li>Analyzed customer perception data</li>
+                    </ul>
+                    
+                    <h5>2. Brand Positioning</h5>
+                    <ul>
+                        <li>Developed "Industrial Innovation" platform</li>
+                        <li>Created new brand archetype (Creator/Innovator)</li>
+                        <li>Defined 3 core brand pillars</li>
+                    </ul>
+                    
+                    <h5>3. Visual Identity</h5>
+                    <ul>
+                        <li>Modernized logo and color palette</li>
+                        <li>Developed brand photography style</li>
+                        <li>Created comprehensive design system</li>
+                    </ul>
+                    
+                    <div class="case-study-images">
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brand Elements">
+                        </div>
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Brand Guidelines">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Business Impact</h4>
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Website Engagement</h5>
+                            <p>80% Increase</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Social Media Growth</h5>
+                            <p>2X Followers</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Lead Quality</h5>
+                            <p>50% Improvement</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Sales Cycle</h5>
+                            <p>22% Reduction</p>
+                        </div>
+                    </div>
+                    <p>The brand transformation successfully repositioned the company as an innovative leader in its space, attracting 35% more qualified leads and reducing sales cycles by 22%. The new visual identity and messaging resonated particularly well with younger buyers in the 25-45 demographic.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Growth Case Study -->
+    <div class="modal" id="growthCaseStudy">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="case-study-header">
+                <i class="fas fa-rocket"></i>
+                <div class="case-study-title">
+                    <h3>Business Growth Strategy</h3>
+                    <p>Scalable framework for tech startup resulting in 5X valuation</p>
+                </div>
+            </div>
+            <div class="case-study-body">
+                <div class="case-study-section">
+                    <h4>Client Background</h4>
+                    <p>Series A tech startup with promising product but struggling to scale beyond early adopters and achieve predictable growth.</p>
+                    
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Valuation Increase</h5>
+                            <p>5X Growth</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Customer Base</h5>
+                            <p>3X Expansion</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>New Markets</h5>
+                            <p>5 Countries</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Growth Challenges</h4>
+                    <ul>
+                        <li>Product-market fit established but scaling challenges</li>
+                        <li>High customer acquisition costs</li>
+                        <li>Limited expansion into new verticals/geographies</li>
+                        <li>Inefficient sales and marketing processes</li>
+                        <li>Difficulty attracting Series B investors</li>
+                    </ul>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Growth Framework</h4>
+                    <h5>1. Market Expansion</h5>
+                    <ul>
+                        <li>Identified 3 new verticals with 40%+ CAGR</li>
+                        <li>Developed geo-expansion roadmap for 5 countries</li>
+                        <li>Created localized go-to-market playbooks</li>
+                    </ul>
+                    
+                    <h5>2. Revenue Optimization</h5>
+                    <ul>
+                        <li>Implemented value-based pricing model</li>
+                        <li>Developed tiered packaging strategy</li>
+                        <li>Created upsell/cross-sell framework</li>
+                    </ul>
+                    
+                    <h5>3. Operational Scaling</h5>
+                    <ul>
+                        <li>Built predictable lead generation engine</li>
+                        <li>Automated key sales/marketing processes</li>
+                        <li>Developed talent acquisition strategy</li>
+                    </ul>
+                    
+                    <div class="case-study-images">
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Growth Framework">
+                        </div>
+                        <div class="case-study-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1815&q=80" alt="Market Expansion">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study-section">
+                    <h4>Results Delivered</h4>
+                    <div class="case-study-stats">
+                        <div class="case-study-stat">
+                            <h5>Valuation</h5>
+                            <p>5X Increase</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Revenue</h5>
+                            <p>4.2X Growth</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Customer Base</h5>
+                            <p>3X Expansion</p>
+                        </div>
+                        <div class="case-study-stat">
+                            <h5>Market Reach</h5>
+                            <p>5 New Countries</p>
+                        </div>
+                    </div>
+                    <p>The growth strategy enabled the company to successfully scale from $2M to $8.4M ARR within 18 months, expanding into 5 new countries and 3 verticals. The predictable growth engine attracted Series B funding at a $120M valuation (5X Series A).</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tools Section -->
+    <section class="section" id="tools">
+        <div class="container">
+            <div class="section-title">
+                <h2>Marketing Tools</h2>
+                <p>Professional tools I use to deliver measurable results for my clients.</p>
+            </div>
+            <div class="tools-container">
+                <div class="tool-card">
+                    <i class="fab fa-google" style="color: #4285F4;"></i>
+                    <h4>Google Analytics</h4>
+                    <div class="skill-meter">
+                        <div class="skill-level" style="width: 95%;"></div>
+                    </div>
+                    <div class="skill-percent">95% Expertise</div>
+                </div>
+                <div class="tool-card">
+                    <i class="fab fa-hubspot" style="color: #FF7A59;"></i>
+                    <h4>HubSpot CRM</h4>
+                    <div class="skill-meter">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                    <div class="skill-percent">90% Expertise</div>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-search-dollar" style="color: #5F30E2;"></i>
+                    <h4>SEMrush</h4>
+                    <div class="skill-meter">
+                        <div class="skill-level" style="width: 88%;"></div>
+                    </div>
+                    <div class="skill-percent">88% Expertise</div>
+                </div>
+                <div class="tool-card">
+                    <i class="fab fa-facebook" style="color: #1877F2;"></i>
+                    <h4>Facebook Ads</h4>
+                    <div class="skill-meter">
+                        <div class="skill-level" style="width: 92%;"></div>
+                    </div>
+                    <div class="skill-percent">92% Expertise</div>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-envelope" style="color: #FFE01B;"></i>
+                    <h4>Mailchimp</h4>
+                    <div class="skill-meter">
+                        <div class="skill-level" style="width: 94%;"></div>
+                    </div>
+                    <div class="skill-percent">94% Expertise</div>
+                </div>
+                <div class="tool-card">
+                    <i class="fas fa-chart-bar" style="color: #67C4F2;"></i>
+                    <h4>Tableau</h4>
+                    <div class="skill-meter">
+                        <div class="skill-level" style="width: 85%;"></div>
+                    </div>
+                    <div class="skill-percent">85% Expertise</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Let's Start a Conversation</h2>
+                <p>Whether you're looking to develop a marketing strategy or need business consulting, I'm here to help.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <a href="mailto:roy.ritik@icloud.com">roy.ritik@icloud.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <a href="tel:+919289283103">+91 9289283103</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/ritik-roy-87aa06196/" target="_blank">Connect with me</a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 style="margin-top: 40px;">Business Hours</h3>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="contact-text">
+                            <h4>Availability</h4>
+                            <p>Monday - Friday: 9am - 6pm IST</p>
+                            <p>Weekends: By appointment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" action="https://formspree.io/f/mvojwjzj" method="POST">
+                        <div id="formMessage" class="form-message" style="display: none;"></div>
+                        <div class="form-group">
+                            <label for="name">Name <span>*</span></label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="What's this about?">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message <span>*</span></label>
+                            <textarea id="message" name="message" class="form-control" placeholder="Tell me about your project or how I can help..." required></textarea>
+                        </div>
+                        <div class="g-recaptcha" data-sitekey="6Lc3zrApAAAAAN4lVdKp2J9n2zQZQZQZQZQZQZQZ"></div>
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i><span>Send Message</span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <a href="#" class="footer-logo"><i class="fas fa-chart-line"></i>Ritik<span>Roy</span></a>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#tools">Tools</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="copyright">
+                &copy; <span id="year"></span> Ritik Roy. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-btn" id="chatBtn">
+            <div class="ria-avatar"></div>
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        <div class="chat-container" id="chatContainer">
+            <div class="chat-header">
+                <h4><i class="fas fa-robot"></i>AI Assistant: <span class="assistant-name">Ria</span></h4>
+                <button class="close-chat" id="closeChat">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-message bot">
+                    <div class="message-content">
+                        Hello there! I'm Ria, Ritik's AI assistant. 😊 How can I help you today? You can ask about:
+                        <br><br>
+                        • Services offered<br>
+                        • Portfolio projects<br>
+                        • How to get in touch<br>
+                        • Marketing tools expertise
+                        <div class="suggested-questions">
+                            <button class="suggested-question">What marketing services do you offer?</button>
+                            <button class="suggested-question">Can you show me some case studies?</button>
+                            <button class="suggested-question">How can I contact Ritik?</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your message...">
+                <button id="sendMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mainNav = document.getElementById('mainNav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth Scrolling for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                if(this.getAttribute('href') === '#') return;
+                
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if(mainNav.classList.contains('active')) {
+                        mainNav.classList.remove('active');
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+            });
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if(window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+            }
+        });
+        
+        // Chat Widget Toggle
+        const chatBtn = document.getElementById('chatBtn');
+        const chatContainer = document.getElementById('chatContainer');
+        const closeChat = document.getElementById('closeChat');
+        
+        chatBtn.addEventListener('click', () => {
+            chatContainer.classList.toggle('active');
+        });
+        
+        closeChat.addEventListener('click', () => {
+            chatContainer.classList.remove('active');
+        });
+        
+        // Simple Chat Functionality
+        const chatInput = document.getElementById('chatInput');
+        const sendMessage = document.getElementById('sendMessage');
+        const chatBody = document.getElementById('chatBody');
+        
+        function showTypingIndicator() {
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'typing-indicator';
+            typingDiv.innerHTML = `
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            `;
+            chatBody.appendChild(typingDiv);
+            chatBody.scrollTop = chatBody.scrollHeight;
+            return typingDiv;
+        }
+        
+        function removeTypingIndicator(typingIndicator) {
+            typingIndicator.remove();
+        }
+        
+        function addUserMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'chat-message user';
+            messageDiv.innerHTML = `
+                <div class="message-content">${message}</div>
+            `;
+            chatBody.appendChild(messageDiv);
+            chatInput.value = '';
+            chatBody.scrollTop = chatBody.scrollHeight;
+            
+            // Show typing indicator
+            const typingIndicator = showTypingIndicator();
+            
+            // Simulate bot response after a delay
+            setTimeout(() => {
+                removeTypingIndicator(typingIndicator);
+                addBotResponse(message);
+            }, 1500);
+        }
+        
+        function addBotResponse(userMessage) {
+            let botResponse = {
+                text: "I'm Ria, Ritik's AI assistant. For more detailed inquiries, please contact him directly via email at roy.ritik@icloud.com or phone at +91 9289283103.",
+                suggestions: [
+                    "What marketing services do you offer?",
+                    "Can you show me some case studies?",
+                    "How can I contact Ritik?"
+                ]
+            };
+            
+            const message = userMessage.toLowerCase();
+            
+            if(message.includes('hi') || message.includes('hello') || message.includes('hey')) {
+                botResponse.text = "Hello! 👋 I'm Ria, Ritik's virtual assistant. How can I help you today? You can ask about services, portfolio projects, or how to get in touch.";
+                botResponse.suggestions = [
+                    "What marketing services do you offer?",
+                    "Can you show me some case studies?",
+                    "How can I contact Ritik?"
+                ];
+            } else if(message.includes('service') || message.includes('offer')) {
+                botResponse.text = "Ritik offers three main services:<br><br>" +
+                    "1. <strong>Digital Marketing</strong> - SEO, PPC, social media, content marketing<br>" +
+                    "2. <strong>Marketing Strategy</strong> - Market research, competitive analysis, positioning<br>" +
+                    "3. <strong>Business Consulting</strong> - Growth strategies, market expansion, performance metrics<br><br>" +
+                    "You can find more details in the Services section of the website.";
+                botResponse.suggestions = [
+                    "Tell me about digital marketing services",
+                    "What's included in marketing strategy?",
+                    "How can business consulting help me?"
+                ];
+            } else if(message.includes('contact') || message.includes('reach') || message.includes('get in touch')) {
+                botResponse.text = "You can contact Ritik through these channels:<br><br>" +
+                    "📧 <strong>Email:</strong> roy.ritik@icloud.com<br>" +
+                    "📞 <strong>Phone:</strong> +91 9289283103<br>" +
+                    "💼 <strong>LinkedIn:</strong> <a href='https://www.linkedin.com/in/ritik-roy-87aa06196/' target='_blank'>Connect here</a><br><br>" +
+                    "Business hours: Mon-Fri 9am-6pm IST";
+                botResponse.suggestions = [
+                    "What's the best way to reach Ritik?",
+                    "Does Ritik offer free consultations?",
+                    "Where is Ritik located?"
+                ];
+            } else if(message.includes('portfolio') || message.includes('work') || message.includes('project')) {
+                botResponse.text = "Ritik has worked on various marketing projects including:<br><br>" +
+                    "🛒 <strong>E-commerce Analytics</strong> - 120% conversion improvement<br>" +
+                    "🎯 <strong>Lead Generation</strong> - 250+ qualified leads<br>" +
+                    "📊 <strong>Market Analysis</strong> - Comprehensive competitive research<br><br>" +
+                    "Check the Portfolio section for detailed case studies.";
+                botResponse.suggestions = [
+                    "Show me e-commerce case studies",
+                    "What's your most successful project?",
+                    "How can I see more work samples?"
+                ];
+            } else if(message.includes('tool') || message.includes('expertise') || message.includes('skill')) {
+                botResponse.text = "Ritik is proficient with these marketing tools:<br><br>" +
+                    "• Google Analytics (95%)<br>" +
+                    "• HubSpot CRM (90%)<br>" +
+                    "• SEMrush (88%)<br>" +
+                    "• Facebook Ads (92%)<br>" +
+                    "• Mailchimp (94%)<br>" +
+                    "• Tableau (85%)<br><br>" +
+                    "You can see all tools in the Tools section.";
+                botResponse.suggestions = [
+                    "What's Ritik's experience with Google Analytics?",
+                    "Do you work with marketing automation tools?",
+                    "Can you help set up analytics tracking?"
+                ];
+            } else if(message.includes('about') || message.includes('who') || message.includes('background')) {
+                botResponse.text = "Ritik Roy is a Marketing Consultant & Strategist currently pursuing his PGPM in Marketing at ICFAI Business School. " +
+                    "With experience as a Business Consultant at World Web Trade, he specializes in data-driven marketing strategies and business growth planning. " +
+                    "Check the About section for more details on his education and experience.";
+                botResponse.suggestions = [
+                    "What's Ritik's educational background?",
+                    "Where has Ritik worked before?",
+                    "What industries does Ritik specialize in?"
+                ];
+            } else if(message.includes('case study') || message.includes('project example')) {
+                botResponse.text = "Ritik has completed several successful marketing projects with measurable results:<br><br>" +
+                    "• <strong>E-commerce Growth</strong>: 210% revenue increase<br>" +
+                    "• <strong>App Launch</strong>: 52,000+ installs at $1.24 CPI<br>" +
+                    "• <strong>Market Positioning</strong>: 139% conversion lift<br><br>" +
+                    "You can view detailed case studies in the Portfolio section.";
+                botResponse.suggestions = [
+                    "Show me the e-commerce case study",
+                    "What was the app launch strategy?",
+                    "How did you improve market positioning?"
+                ];
+            }
+            
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'chat-message bot';
+            messageDiv.innerHTML = `
+                <div class="message-content">${botResponse.text}</div>
+            `;
+            chatBody.appendChild(messageDiv);
+            
+            // Add suggested questions if they exist
+            if(botResponse.suggestions && botResponse.suggestions.length > 0) {
+                const suggestionsDiv = document.createElement('div');
+                suggestionsDiv.className = 'suggested-questions';
+                
+                botResponse.suggestions.forEach(suggestion => {
+                    const button = document.createElement('button');
+                    button.className = 'suggested-question';
+                    button.textContent = suggestion;
+                    button.addEventListener('click', () => {
+                        addUserMessage(suggestion);
+                    });
+                    suggestionsDiv.appendChild(button);
+                });
+                
+                messageDiv.querySelector('.message-content').appendChild(suggestionsDiv);
+            }
+            
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }
+        
+        // Handle suggested question clicks
+        document.addEventListener('click', (e) => {
+            if(e.target.classList.contains('suggested-question')) {
+                addUserMessage(e.target.textContent);
+            }
+        });
+        
+        sendMessage.addEventListener('click', () => {
+            const message = chatInput.value.trim();
+            if(message) {
+                addUserMessage(message);
+            }
+        });
+        
+        chatInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') {
+                const message = chatInput.value.trim();
+                if(message) {
+                    addUserMessage(message);
+                }
+            }
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Form submission with Formspree
+        const contactForm = document.getElementById('contactForm');
+        const formMessage = document.getElementById('formMessage');
+        
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            // Verify reCAPTCHA
+            const recaptchaResponse = grecaptcha.getResponse();
+            if(!recaptchaResponse) {
+                formMessage.textContent = 'Please complete the CAPTCHA verification.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+                return;
+            }
+            
+            const formData = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if(response.ok) {
+                    formMessage.textContent = 'Thank you for your message! I will get back to you soon.';
+                    formMessage.className = 'form-message success';
+                    formMessage.style.display = 'block';
+                    contactForm.reset();
+                    grecaptcha.reset();
+                    
+                    // Hide message after 5 seconds
+                    setTimeout(() => {
+                        formMessage.style.display = 'none';
+                    }, 5000);
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch(error) {
+                formMessage.textContent = 'There was a problem sending your message. Please try again later or contact me directly at roy.ritik@icloud.com.';
+                formMessage.className = 'form-message error';
+                formMessage.style.display = 'block';
+            }
+        });
+        
+        // Portfolio tab functionality
+        const portfolioTabs = document.querySelectorAll('.portfolio-tab');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        portfolioTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update active tab
+                portfolioTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                const category = tab.getAttribute('data-category');
+                
+                // Filter portfolio items
+                portfolioItems.forEach(item => {
+                    if(category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Case Study Modal Functionality
+        const caseStudyLinks = document.querySelectorAll('.view-case-study');
+        const modals = document.querySelectorAll('.modal');
+        const closeButtons = document.querySelectorAll('.close-modal');
+
+        caseStudyLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const caseStudy = link.getAttribute('data-case');
+                document.getElementById(`${caseStudy}CaseStudy`).style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                modals.forEach(modal => {
+                    modal.style.display = 'none';
+                });
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                modals.forEach(modal => {
+                    modal.style.display = 'none';
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Add animation to elements when they come into view
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.section-title, .service-card, .portfolio-item, .tool-card');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if(elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        };
+        
+        // Set initial state for animated elements
+        document.querySelectorAll('.section-title, .service-card, .portfolio-item, .tool-card').forEach(element => {
+            element.style.opacity = '0';
+            element.style.transform = 'translateY(30px)';
+            element.style.transition = 'all 0.6s ease';
+        });
+        
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html>
